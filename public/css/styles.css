@@ -22,7 +22,7 @@ p.information-text {
   position: relative;
   top: 38vh;
   display: block;
-  color: rgba(255,255,255,.8);
+  color: rgba(255,255,255,.7);
   font-weight: 400;
   text-align: center;
   clear: both;
@@ -71,7 +71,7 @@ div.menu-container .menu-close-button {
   position: absolute;
   float: right;
   right: 25px;
-  top: 25px;
+  top: 27px;
   cursor: pointer;
   font-size: 1.1em;
   padding-top: 5px;
@@ -94,6 +94,7 @@ div.menu-container {
   float: left;
   bottom: 0;
   left: -222px;
+  border-top-right-radius: 2px;
   border-right: 1px solid #707793;
   background: white;
   color: #333;
@@ -161,7 +162,7 @@ div.menu-open-button {
 }
 
 div.menu-open-button:hover {
-  color: #777;
+  color: rgba(255,255,255,.85);
 }
 
 div.search {
@@ -228,32 +229,6 @@ input.ghostbar:focus {
 
 input.ghostbar:active {
   border: none;
-}
-
-.mode-search {
-  position: relative;
-  height: 0;
-  margin: 0 auto;
-  float: right;
-  right: 40px;
-  text-align: center;
-  background: transparent;
-  top: -72px;
-}
-
-p.mode-search-btn {
-  position: relative;
-  display: none;
-  height: 20px;
-  color: white;
-  font-size: .8em;
-  letter-spacing: -.5px;
-  text-transform: uppercase;
-  margin: 0 auto;
-  padding: 10px 10px;
-  border-radius: 2px;
-  background: rgba(135,199,153,.8);
-  transition: all .5s;
 }
 
 .special {

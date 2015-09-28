@@ -8,11 +8,12 @@ $(document).ready( function() {
     console.log("Document is ready.")
     // jQuery goes here.
 
+    // This opens the menu
     var menuflag = 0;
     $('.menu-open-button').on('click', function() {
         console.log('Opened menu');
         $('.menu-container').stop().animate({ left: '0px'}, 500);
-        menuflag++
+        menuflag++      // Increment menuflag to enable backwards capability
         if (menuflag === 2) {
           $('.menu-container').stop().animate({ left: '-222px'}, 400);
           menuflag = menuflag - 2;
@@ -27,37 +28,38 @@ $(document).ready( function() {
       }
     });
 
-    /* Check to see if user uses a power-word.
-    var btnFlag = 0;
+    /* Probably going to change these a bit, looking for other ways to implement
+    a cool system in which the user can write in the ghostbar like it is a make-
+    shift terminal of some sorts. */
 
+    /*
     $('.ghostbar').on('keypress', function() {
       if ($(this).val() == "torrents:" || $(this).val() == "torrent:") {
           $('.mode-search-btn').show().append('torrents');
           console.log("Torrents")
-          btnFlag++;
       } else if ($(this).val() == "internet:") {
           $('.mode-search-btn').show().css({ "background": "#777"}).append('internet');
-          btnFlag++;
       } else {
         $('.mode-search-btn').hide().empty();
         $('.mode-search-btn').removeAttr('style');
-        btnFlag--;
       }
     });
-
     */
-    // Trying to make the ghostbar know when there is a letter in the input field.
+
+    // Check value of ghostbar
     $('.ghostbar').on('keyup', function() {
       var bar = $(this).val();
       if (bar.length === 1) {
         $('.search-icon').css({
-          "color": "#444"
+          "color": "#444"     // This sets the icon to become darker.
         });
       } else if (bar.length === 0) {
         $('.clear-button').css({
-          "display": "block"
+          "display": "block"    // The clear button is not added. No function.
         });
-        $('.search-icon').removeAttr('style');
+        $('.search-icon').css({
+          "color": "rgba(1,1,1,.6)"
+        });  // Removes the style attribute (Warning): This also removes the style when themes are in use.
       }
     });
 
