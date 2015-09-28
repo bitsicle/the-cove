@@ -12,10 +12,10 @@ $(document).ready( function() {
     var menuflag = 0;
     $('.menu-open-button').on('click', function() {
         console.log('Opened menu');
-        $('.menu-container').stop().animate({ left: '0px'}, 500);
+        $('.menu-container').stop().animate({ left: '0px'}, 200);
         menuflag++      // Increment menuflag to enable backwards capability
         if (menuflag === 2) {
-          $('.menu-container').stop().animate({ left: '-222px'}, 400);
+          $('.menu-container').stop().animate({ left: '-222px'}, 200);
           menuflag = menuflag - 2;
         }
     });
@@ -23,7 +23,7 @@ $(document).ready( function() {
     $('.menu-close-button').on('click', function() {
         // This closes menu
         if (menuflag === 1) {
-        $('.menu-container').stop().animate({ left: '-222px'}, 500);
+        $('.menu-container').stop().animate({ left: '-222px'}, 200);
         menuflag--;
       }
     });
