@@ -62,12 +62,6 @@ i.regular-theme {
   display: inline-block;
 }
 
-/* NOTE
-Colors
-#2EAAE0 -- blue
-#F14444 -- red
-*/
-
 div.menu-container .menu-close-button {
   position: absolute;
   float: right;

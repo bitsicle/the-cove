@@ -42,7 +42,7 @@ div.search-icon {
   background: transparent;
   padding: 5px 10px;
   border-radius: 0px 2px 2px 0px;
-  font-size: 1.2em;
+  font-size: 1em;
   float: right;
   color: rgba(1,1,1,.6);
   transition: color .5s;
@@ -54,7 +54,7 @@ div.search-icon {
 input[type="submit"] {
   border: none;
   background: transparent;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 div.input-wrapper form {
@@ -177,9 +177,18 @@ div.menu-open-button {
   padding-right: 10px;
   border-radius: 3px;
   transition: color .2s;
-  border: 1px solid rgba(1,1,1,.1);
+  transition: background .2s;
+  border: 1px solid transparent;
 }
 
 div.menu-open-button:hover {
-  color: rgba(1,1,1,.85);
+  color: rgba(255,255,255,1);
+  background: #363040;
+}
+
+.extender {
+  position: relative;
+  top: 30px;
+  margin-left: 5%;
+  background: red;
 }
