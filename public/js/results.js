@@ -6,15 +6,14 @@ if ( typeof jQuery != 'undefined' ) {
 
 $(document).ready( function() {
     console.log("Document is ready.")
-    // jQuery goes here.
 
     // This opens the menu
     var menuflag = 0;
     $('.menu-open-button').on('click', function() {
-        $('.menu-container').stop().animate({ left: '0px'}, 200);
+        $('.menu-container').stop().animate({ right: '0px'}, 200);
         menuflag++      // Increment menuflag to enable backwards capability
         if (menuflag == 2) {
-          $('.menu-container').stop().animate({ left: '-222px'}, 200);
+          $('.menu-container').stop().animate({ right: '-222px'}, 200);
           menuflag = menuflag - 2;
         }
     });
@@ -22,7 +21,7 @@ $(document).ready( function() {
     $('.menu-close-button').on('click', function() {
         // This closes menu
         if (menuflag == 1) {
-        $('.menu-container').stop().animate({ left: '-222px'}, 200);
+        $('.menu-container').stop().animate({ right: '-222px'}, 200);
         menuflag--;
       }
     });
@@ -43,5 +42,4 @@ $(document).ready( function() {
         });  // Removes the style attribute (Warning): This also removes the style when themes are in use.
       }
     });
-    // Document ready
 });
